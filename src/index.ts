@@ -10,6 +10,7 @@ import {
   ApolloServerPluginLandingPageGraphQLPlayground,
 } from "apollo-server-core";
 import { resolvers } from "./resolvers";
+import connectDb from "./utils/mongo";
 
 async function bootstrap() {
   const schema = await buildSchema({
@@ -37,6 +38,8 @@ async function bootstrap() {
   await server.start();
 
   server.applyMiddleware({ app });
+
+  connectDb();
 
   app.listen({ port: process.env.PORT || 4000 }, () =>
     console.log(
