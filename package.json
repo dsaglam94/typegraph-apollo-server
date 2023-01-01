@@ -5,6 +5,9 @@
   "repository": "https://github.com/dsaglam94/typegraph-apollo-server.git",
   "author": "dsaglam94 <d.saglam@outlook.fr>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
   "dependencies": {
     "@typegoose/typegoose": "^10.0.0",
     "apollo-server": "^3.11.1",
