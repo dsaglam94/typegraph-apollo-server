@@ -1,12 +1,8 @@
 {
   "name": "typegraph-apollo-playground",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": "https://github.com/dsaglam94/typegraph-apollo-server.git",
+  "author": "dsaglam94 <d.saglam@outlook.fr>",
+  "license": "MIT"
 }
