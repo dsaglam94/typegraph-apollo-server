@@ -10,6 +10,7 @@ import {
   ApolloServerPluginLandingPageGraphQLPlayground,
 } from "apollo-server-core";
 import { resolvers } from "./resolvers";
+import authChecker from "./utils/authChecker";
 import connectDb from "./utils/mongo";
 import Context from "./types/context";
 import { verifyJwt } from "./utils/jwt";
@@ -18,7 +19,7 @@ import { User } from "./schema/user.schema";
 async function bootstrap() {
   const schema = await buildSchema({
     resolvers,
-    // authCheckers
+    authChecker,
     validate: {
       forbidUnknownValues: false,
     },
